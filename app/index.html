@@ -9,7 +9,7 @@
 <body>
   <header class="header">
   <div class="container header__container">
-    <div class="header__menu-line">
+    <div class="header__menu-line menu-line">
       <a href="#" class="header__logo accent-point link">
         uifuse
       </a>
@@ -22,8 +22,25 @@
         <a href="#" class="main-menu__link link accent-point">pricing plan</a>
         <a href="#" class="main-menu__link link accent-point">blog</a>
         <a href="#" class="main-menu__link link accent-point">contact</a>
-        <div class="header__search">f</div>
       </nav>
+
+      <div class="user-bar">
+        <form action="#" enctype="multipart/form-data" class="search-form">
+          <div class="search-form__wrap icon icon-search">
+            <input
+              class="search-form__input"
+              type="search"
+              placeholder="eg.search.com"
+              name="search"
+            />
+            <input class="search-form__btn" type="submit" value="" />
+          </div>
+        </form>
+
+        <div class="menu-line__toggle toggle-menu">
+          <div class="toggle-menu__line"></div>
+        </div>
+      </div>
     </div>
 
     <div class="header__slider slider">
@@ -56,6 +73,32 @@
       <a href="#" class="header-social__link link">twitter</a>
     </div>
 
+    <div class="pagination header__pagination">
+      <div class="pagination__slide-number">
+        <div class="pagination__cur-number">02</div>
+        <div class="pagination__slash">/</div>
+        <div class="pagination__total-number">03</div>
+      </div>
+
+      <div class="header-nav-container"></div>
+
+      <div class="pagination__cur-slide">
+        <div class="pagination__slide-name">
+          dancing girl
+        </div>
+        <div class="pagination__cur-slide-number">
+          02
+        </div>
+      </div>
+
+      <div class="header-controls-btns pagination__controls-btns">
+        <div class="header-controls-btns__prev icon icon-left-open">next</div>
+        <div class="header-controls-btns__next icon icon-right-open">
+          previous
+        </div>
+      </div>
+    </div>
+
     <div class="header__scroll">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,15 +115,6 @@
           </g>
         </g>
       </svg>
-    </div>
-
-    <div class="header-nav-container"></div>
-
-    <div class="header-controls-btns header__controls-btns">
-      <div class="header-controls-btns__prev icon icon-left-open">next</div>
-      <div class="header-controls-btns__next icon icon-right-open">
-        previous
-      </div>
     </div>
   </div>
 </header>

@@ -17,6 +17,20 @@
     }
 
     // ----------------------------------------------
+    //		humburger menu
+    // ----------------------------------------------
+    function toggleMenu() {
+      const toggleLine = getEl('.toggle-menu__line');
+      const mainMenu = getEl('.main-menu');
+
+      toggleLine.classList.toggle('toggle-menu__line_active');
+      mainMenu.classList.toggle('main-menu_active');
+    }
+
+    const toggleBtn = getEl('.toggle-menu');
+    toggleBtn.onclick = () => toggleMenu();
+
+    // ----------------------------------------------
     //		header slider
     //    https://github.com/ganlanyuan/tiny-slider
     // ----------------------------------------------
