@@ -1,0 +1,135 @@
+.header {
+	text-align: center;
+	background-color: #f4f4f4;
+
+  &__container {
+    position: relative;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 16px;
+    // letter-spacing: 2.56px
+
+    &::before {
+      width: 6px;
+      height: 6px;
+      right: -12px;
+      bottom: 6px;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  &__scroll {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__search {
+    display: inline-block;
+  }
+
+  &__slider {
+  }
+  &__social {
+  }
+
+  &__controls-btns {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+.main-menu {
+  &__link {
+    text-decoration: none;
+    margin-right: 40px;
+
+    &::before {
+      top: 7px;
+      left: -7px;
+      opacity: 0;
+      transition: background-color 0.25s ease, opacity 0.25s ease;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.slider {
+  // position: relative;
+  padding: 240px 0 50px 0;
+  padding-right: 160px;
+
+  &__item {
+  }
+
+  &__slogan {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 12.48px;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      right: -20px;
+      bottom: 10px;
+    }
+  }
+}
+
+.header-social {
+  position: absolute;
+  top: 135px;
+  right: -30px;
+
+  &__link {
+    display: block;
+    transform: rotate(-90deg);
+    color: $text-color-light;
+    margin-bottom: 135px;
+    color: #999999;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.header-controls-btns {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+ 
+
+  &__prev,
+  &__next {
+    color: #999999;
+		cursor: pointer;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
