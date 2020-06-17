@@ -11,6 +11,7 @@ let path = {
     css: source_folder + '/scss/main.scss',
     js: [
       // add js libs
+      source_folder + '/libs/tiny-slider/tiny-slider.min.js',
       source_folder + '/js/common.js',
     ],
     img: source_folder + '/img/**/*',

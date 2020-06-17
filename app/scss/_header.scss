@@ -133,3 +133,25 @@
     }
   }
 }
+
+.header-nav-container {
+
+  user-select: none;
+  cursor: pointer;
+
+  &__dot {
+    width: 12px;
+    height: 2px;
+    background-color: #c3c3c3;
+    display: inline-block;
+    margin-right: 10px;
+ 
+    &:active{
+      background-color: #555555;
+    }
+
+    &.tns-nav-active {
+      background-color: $accent-color;
+    }
+  }
+}
