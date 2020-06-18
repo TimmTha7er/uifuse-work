@@ -1,6 +1,9 @@
+// ----------------------------------------------
+//		header
+// ----------------------------------------------
 .header {
   text-align: center;
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
 
   &__container {
     position: relative;
@@ -9,13 +12,13 @@
   &__logo {
     font-weight: 700;
     font-size: 16px;
-    // letter-spacing: 2.56px
+    letter-spacing: 2.56px;
 
     &::before {
       width: 6px;
       height: 6px;
       right: -12px;
-      bottom: 6px;
+      bottom: 7px;
     }
   }
 
@@ -25,7 +28,7 @@
   &__menu-line {
     display: flex;
     // justify-content: space-between;
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   &__scroll {
@@ -37,11 +40,6 @@
     display: inline-block;
   }
 
-  &__slider {
-  }
-  &__social {
-  }
-
   &__pagination {
     position: absolute;
     top: 0;
@@ -49,15 +47,19 @@
   }
 }
 
-.menu-line {
-}
+
+// ----------------------------------------------
+//		menu line
+// ----------------------------------------------
 
 .main-menu {
-  margin-left: 260px;
+  margin-left: 280px;
+  font-size: 14px;
+  font-weight: 700;
 
   &__link {
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 33px;
 
     &::before {
       top: 7px;
@@ -74,201 +76,7 @@
   }
 }
 
-.slider {
-  // position: relative;
-  padding: 240px 0 50px 0;
-  padding-right: 160px;
-
-  &__item {
-  }
-
-  &__slogan {
-    text-align: right;
-    font-size: 12px;
-    letter-spacing: 12.48px;
-  }
-
-  &__title {
-    color: #000;
-    font-size: 100px;
-    font-weight: 700;
-    text-align: right;
-    line-height: 1;
-    text-transform: uppercase;
-
-    &::before {
-      width: 10px;
-      height: 10px;
-      right: -20px;
-      bottom: 10px;
-    }
-  }
-}
-
-.header-social {
-  position: absolute;
-  top: 135px;
-  right: -30px;
-
-  &__link {
-    display: block;
-    position: relative;
-    transform: rotate(-90deg);
-    color: $text-color-light;
-    margin-bottom: 165px;
-    color: #999999;
-
-    &:hover {
-      color: $text-color;
-    }
-
-    &:not(:last-child) {
-      &::after {
-        position: absolute;
-        content: '';
-        top: 9px;
-        right: 90px;
-        width: 60px;
-        height: 2px;
-        background-color: #e5e5e5;
-      }
-    }
-  }
-}
-
-.header-controls-btns {
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: left;
-  user-select: none;
-
-  &__prev,
-  &__next {
-    color: #999999;
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-      color: $text-color;
-    }
-  }
-}
-
-.header-nav-container {
-  position: absolute;
-  top: 250px;
-  left: 0;
-
-  user-select: none;
-  cursor: pointer;
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: '';
-    width: 2px;
-    height: 38px;
-    background-color: $text-color-light;
-    left: 5px;
-  }
-
-  &::after {
-    top: -32px;
-  }
-
-  &::before {
-    bottom: -32px;
-  }
-
-  &__dot {
-    width: 40px;
-    height: 40px;
-    top: -20px;
-    left: -20px;
-    margin-top: 40px;
-    position: relative;
-    outline: none;
-
-    &::after {
-      position: absolute;
-      content: '';
-      top: 20px;
-      left: 20px;
-      width: 12px;
-      height: 2px;
-      background-color: #c3c3c3;
-    }
-
-    &:active {
-      // background-color: #555555;
-    }
-
-    &.tns-nav-active {
-      &::after {
-        background-color: #555555;
-      }
-    }
-  }
-}
-
-.pagination {
-  font-family: 'Open Sans - Semibold';
-  font-size: 12px;
-
-  &__slide-number {
-    position: absolute;
-    top: 120px;
-    left: 0;
-  }
-
-  &__cur-number,
-  &__total-number,
-  &__slash {
-    transform: rotate(-90deg);
-  }
-
-  &__cur-number {
-    color: #999999;
-  }
-
-  &__total-number {
-  }
-
-  &__cur-slide {
-    position: absolute;
-    top: 360px;
-    left: 30px;
-    width: 100px;
-  }
-
-  &__slide-name {
-    position: absolute;
-    top: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    z-index: 1;
-  }
-
-  &__cur-slide-number {
-    position: absolute;
-    top: -60px;
-    font-family: Lato;
-    font-size: 78px;
-    color: #e5e5e5;
-   
-  }
-
-  &__controls-btns {
-    position: absolute;
-    top: 560px;
-    left: 0;
-  }
-}
-
-// ----------------------------------------------
 //		dropdown menu button
-// ----------------------------------------------
 .toggle-menu {
   display: flex;
   justify-content: center;
@@ -331,13 +139,13 @@
   position: relative;
   cursor: pointer;
 
-  margin-right: 30px;
+  margin-right: 36px;
 
   &::after {
     position: absolute;
     content: '';
     top: 5px;
-    left: 35px;
+    left: 37px;
     width: 2px;
     height: 15px;
     background-color: #c3c3c3;
@@ -363,3 +171,219 @@
   justify-content: center;
   margin-left: auto;
 }
+
+
+// ----------------------------------------------
+//		header body
+// ----------------------------------------------
+.slider {
+  padding: 336px 0 50px 0;
+
+  &__slogan {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 12.5px;
+    margin-top: 27px;
+    font-weight: 700;
+    padding-right: 185px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    padding-right: 175px;
+    margin-top: 52px;
+    margin-bottom: 26px;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      right: 150px;
+      bottom: 15px;
+    }
+  }
+}
+
+.header-social {
+  position: absolute;
+  top: 4px;
+  right: -40px;
+
+  &__link {
+    display: block;
+    position: relative;
+    transform: rotate(-90deg);
+    color: $text-color-light;
+    margin-top: 180px;
+    color: #999999;
+    letter-spacing: 0.7px;
+
+    &_bold {
+      font-weight: 700;
+      color: $text-color;
+    }
+
+    &:hover {
+      color: $text-color;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: '';
+        top: 9px;
+        right: 120px;
+        width: 60px;
+        height: 2px;
+        background-color: #e5e5e5;
+      }
+    }
+  }
+}
+
+.header-controls-btns {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  user-select: none;
+
+  &__prev,
+  &__next {
+    color: #999999;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 5px;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  &__prev {
+    font-weight: 700;
+    color: $text-color;
+  }
+
+
+}
+
+.header-nav-container {
+  position: absolute;
+  top: 305px;
+  left: 3px;
+
+  user-select: none;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 38px;
+    background-color: $text-color-light;
+    left: 5px;
+  }
+
+  &::after {
+    top: -32px;
+  }
+
+  &::before {
+    bottom: -32px;
+  }
+
+  &__dot {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: -20px;
+    margin-top: 30px;
+    position: relative;
+    outline: none;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      left: 20px;
+      width: 12px;
+      height: 2px;
+      background-color: #c3c3c3;
+    }
+
+    &:active {
+      // background-color: #555555;
+    }
+
+    &.tns-nav-active {
+      &::after {
+        background-color: #555555;
+      }
+    }
+  }
+}
+
+.pagination {
+  font-family: 'Open Sans - Semibold';
+  font-size: 12px;
+
+  &__slide-number {
+    position: absolute;
+    top: 150px;
+    left: 3px;
+  }
+
+  &__cur-number,
+  &__total-number,
+  &__slash {
+    transform: rotate(-90deg);
+    font-weight: 700;
+  }
+
+  &__cur-number {
+    color: #999999;
+    font-weight: normal;
+  }
+
+
+
+  &__cur-slide {
+    position: absolute;
+    top: 360px;
+    left: 30px;
+    width: 100px;
+  }
+
+  &__slide-name {
+    position: absolute;
+    top: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &__cur-slide-number {
+    position: absolute;
+    top: -26px;
+    font-family: Lato;
+    font-size: 78px;
+    color: #e5e5e5;
+  }
+
+  &__controls-btns {
+    position: absolute;
+    top: 603px;
+    left: 0;
+  }
+}
+
+

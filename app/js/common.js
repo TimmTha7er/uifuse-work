@@ -62,6 +62,7 @@
       controlsContainer: '.header-controls-btns',
       prevButton: '.header-controls-btns__prev',
       nextButton: '.header-controls-btns__next',
+      startIndex: 1
     });
   });
 })();
