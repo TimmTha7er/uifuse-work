@@ -3,7 +3,12 @@
 // ----------------------------------------------
 .header {
   text-align: center;
-  // background-color: #f4f4f4;
+  background-color: #f4f4f4;
+  padding-bottom: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
 
   &__container {
     position: relative;
@@ -27,13 +32,23 @@
 
   &__menu-line {
     display: flex;
-    // justify-content: space-between;
     padding-top: 30px;
+
+    @media only screen and (max-width: 1200px) {
+      justify-content: space-between;
+    }
   }
 
   &__scroll {
-    display: inline-block;
+    position: relative;
+    top: -90px;
     cursor: pointer;
+    width: 50px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 480px) {
+      top: -20px;
+    }
   }
 
   &__search {
@@ -44,28 +59,110 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @media only screen and (max-width: 768px) {
+      left: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      left: 0;
+    }
   }
 }
-
 
 // ----------------------------------------------
 //		menu line
 // ----------------------------------------------
 
 .main-menu {
-  margin-left: 280px;
+  margin-left: 245px;
   font-size: 14px;
   font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  position: relative;
+  z-index: 99;
+
+  &_active {
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    margin-left: initial;
+  }
+  @media only screen and (max-width: 992px) {
+    position: absolute;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+  @media only screen and (max-width: 768px) {
+    display: block;
+    text-align: left;
+    top: 105px;
+    left: 0;
+    padding: 60px 0;
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    max-height: none;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.25s ease, padding 0.25s ease;
+
+    &_active {
+      max-width: 1000px;
+      padding: 60px 50px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    // text-align: center;
+    width: 100%;
+
+    &_active {
+      padding-left: 110px;
+    }
+  }
 
   &__link {
     text-decoration: none;
-    margin-right: 33px;
+    margin-left: 33px;
+
+    @media only screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+    @media only screen and (max-width: 992px) {
+      flex: 0 1 33.3333%;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+    @media only screen and (max-width: 768px) {
+      display: block;
+      margin-bottom: 20px;
+      color: #f4f4f4;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &::before {
       top: 7px;
       left: -7px;
       opacity: 0;
       transition: background-color 0.25s ease, opacity 0.25s ease;
+
+      @media only screen and (max-width: 992px) {
+        // top: 10px;
+        // left: 75px;
+        display: none;
+      }
+      @media only screen and (max-width: 768px) {
+        // left: -7px;
+      }
     }
 
     &:hover {
@@ -84,7 +181,7 @@
   width: 22px;
   height: 12px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 9999;
 
   padding-top: 12px;
 
@@ -158,8 +255,6 @@
     display: none;
   }
   &__wrap {
-    // display: none;
-
     &::before {
       font-size: 16px;
     }
@@ -170,14 +265,55 @@
   display: flex;
   justify-content: center;
   margin-left: auto;
-}
 
+  @media only screen and (max-width: 1200px) {
+    margin-left: initial;
+  }
+}
 
 // ----------------------------------------------
 //		header body
 // ----------------------------------------------
+.tns-outer {
+  margin-top: -15px;
+
+  @media only screen and (max-width: 480px) {
+    margin-top: 15px;
+  }
+}
+
 .slider {
-  padding: 336px 0 50px 0;
+  &__item {
+    position: relative;
+    padding: 351px 0 140px 0;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 351px 0 80px 0;
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 351px 0 70px 0;
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 210px 0 70px 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 18% 50%;
+    opacity: 0.8;
+    z-index: -1;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 10px;
+    }
+  }
 
   &__slogan {
     text-align: right;
@@ -187,6 +323,20 @@
     font-weight: 700;
     padding-right: 185px;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 1200px) {
+      padding-right: 80px;
+      letter-spacing: 10px;
+    }
+    @media only screen and (max-width: 992px) {
+      padding-right: 60px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding-right: 20px;
+    }
+    @media only screen and (max-width: 480px) {
+      letter-spacing: 5px;
+    }
   }
 
   &__title {
@@ -206,14 +356,56 @@
       height: 10px;
       right: 150px;
       bottom: 15px;
+
+      @media only screen and (max-width: 1200px) {
+        right: 55px;
+        bottom: 11px;
+      }
+      @media only screen and (max-width: 992px) {
+        right: 35px;
+      }
+      @media only screen and (max-width: 768px) {
+        right: 0px;
+        bottom: 8px;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 80px;
+      padding-right: 70px;
+      margin-top: 40px;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 70px;
+      margin-top: 20px;
+      padding-right: 50px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding-right: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: 50px;
     }
   }
 }
 
 .header-social {
   position: absolute;
-  top: 4px;
-  right: -40px;
+  top: 35px;
+  right: 0px;
+  max-width: 10px;
+
+  @media only screen and (max-width: 992px) {
+    top: 5px;
+  }
+  @media only screen and (max-width: 768px) {
+    right: auto;
+    left: 0;
+    display: flex;
+    width: 100%;
+    top: 75px;
+    max-width: none;
+  }
 
   &__link {
     display: block;
@@ -224,13 +416,20 @@
     color: #999999;
     letter-spacing: 0.7px;
 
+    @media only screen and (max-width: 768px) {
+      position: static;
+      transform: none;
+      margin: 0;
+      flex: 1 0 33.3333%;
+    }
+
     &_bold {
       font-weight: 700;
       color: $text-color;
     }
 
     &:hover {
-      color: $text-color;
+      color: $accent-color;
     }
 
     &:not(:last-child) {
@@ -238,10 +437,14 @@
         position: absolute;
         content: '';
         top: 9px;
-        right: 120px;
+        right: 40px;
         width: 60px;
         height: 2px;
         background-color: #e5e5e5;
+
+        @media only screen and (max-width: 768px) {
+          content: none;
+        }
       }
     }
   }
@@ -252,6 +455,14 @@
   text-transform: uppercase;
   text-align: left;
   user-select: none;
+  font-family: 'Montserrat', sans-serif;
+
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+  }
 
   &__prev,
   &__next {
@@ -259,9 +470,10 @@
     cursor: pointer;
     outline: none;
     margin-bottom: 5px;
+    transition: color 0.25s ease;
 
     &:hover {
-      color: $text-color;
+      color: $accent-color;
     }
   }
 
@@ -269,17 +481,24 @@
     font-weight: 700;
     color: $text-color;
   }
-
-
 }
 
 .header-nav-container {
   position: absolute;
   top: 305px;
   left: 3px;
-
   user-select: none;
   cursor: pointer;
+
+  @media only screen and (max-width: 992px) {
+    top: 270px;
+  }
+  @media only screen and (max-width: 768px) {
+    top: 240px;
+  }
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 
   &::after,
   &::before {
@@ -338,6 +557,13 @@
     position: absolute;
     top: 150px;
     left: 3px;
+
+    @media only screen and (max-width: 992px) {
+      top: 115px;
+    }
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
   }
 
   &__cur-number,
@@ -352,13 +578,15 @@
     font-weight: normal;
   }
 
-
-
   &__cur-slide {
     position: absolute;
     top: 360px;
     left: 30px;
     width: 100px;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__slide-name {
@@ -383,7 +611,16 @@
     position: absolute;
     top: 603px;
     left: 0;
+
+    @media only screen and (max-width: 992px) {
+      top: 570px;
+    }
+    @media only screen and (max-width: 768px) {
+      top: 540px;
+    }
+    @media only screen and (max-width: 480px) {
+      top: 500px;
+      position: relative;
+    }
   }
 }
-
-
