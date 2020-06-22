@@ -1,0 +1,30 @@
+// ----------------------------------------------
+//		footer
+// ----------------------------------------------
+
+.footer {
+	padding: 75px 0;
+	background-color: #313131;
+	text-align: center;
+}
+
+.footer-social {
+	margin-bottom: 15px;
+
+	&__link {
+		color: #eaeaea;
+		margin: 0 20px;
+	}
+}
+
+.footer-legal {
+	font-family: "Open Sans", sans-serif;
+
+	&__copyright {
+		color: #eaeaea;
+	}
+
+	&__site-name {
+		color: $accent-color;
+	}
+}
