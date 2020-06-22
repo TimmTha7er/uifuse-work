@@ -1,0 +1,78 @@
+.portfolio {
+  padding: 92px 0;
+	background-color: #262626;
+	
+	&__tabs {
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+}
+
+.tabs {
+  max-width: 530px;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: inline-block;
+    color: #999999;
+    letter-spacing: 0.17px;
+    text-transform: uppercase;
+    // margin-right: 50px;
+    cursor: pointer;
+    transition: color 0.25s ease;
+
+    &::before {
+      top: 10px;
+      left: -5px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &_active {
+      color: $accent-color;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.content {
+  display: grid;
+	grid-gap: 30px;
+
+  grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(7, minmax(270px, 270px));
+	
+	@media only screen and (max-width: 1200px) {
+    grid-template-rows: repeat(7,  218px);
+  }
+
+  &__item {
+		background-color: #ebebeb;
+		// overflow: hidden;
+
+		&:nth-child(2),
+    &:nth-child(11) {
+      grid-column: span 2;
+    }
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(14) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+	}
+	
+	&__img {
+		width: 100%;                   
+    height: 100%;
+    object-fit: cover;
+	}
+}
