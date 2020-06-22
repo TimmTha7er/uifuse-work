@@ -62,7 +62,25 @@
       controlsContainer: '.header-controls-btns',
       prevButton: '.header-controls-btns__prev',
       nextButton: '.header-controls-btns__next',
-      startIndex: 1
+      startIndex: 1,
+    });
+
+    // change slide number
+    const totalSlide = getEl('.pagination__cur-number');
+    totalSlide.innerHTML = '0' + slider.getInfo().slideCount;
+
+    function changeSlideNumber(className) {
+      const element = getEl(className);
+      element.innerHTML = '0' + slider.getInfo().index;
+    }
+
+    changeSlideNumber('.pagination__cur-slide-number');
+
+    slider.events.on('indexChanged', () => {
+      setTimeout(() => {
+        changeSlideNumber('.pagination__cur-slide-number');
+        changeSlideNumber('.pagination__total-number');
+      }, 500);
     });
   });
 })();
