@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <!-- сделать, что бы поиск разворичивался при клике на него
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- сделать, что бы поиск разворичивался при клике на него
   и сворачивался если он не активен -->
+    <!-- подумать, нужно ли заголовок и подзаголовок включать в слайд -->
+    <!-- написать JS для скролла вниз -->
 
-  <!-- подумать, нужно ли заголовок и подзаголовок включать в слайд -->
-  <!-- написать JS для скролла вниз -->
-  <header class="header">
+    <header class="header">
   <div class="container header__container">
     <div class="header__menu-line menu-line">
       <a href="#" class="header__logo accent-point link">
@@ -50,21 +50,63 @@
 
     <div class="header__slider slider">
       <div class="slider__item">
-        <img class="slider__img" src="img/header/header-bg-1.png" alt="dancing">
+        <picture>
+          <source
+            srcset="
+              img/header/header-bg-1.webp    1x,
+              img/header/header-bg-1@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            class="slider__img"
+            src="img/header/header-bg-1.png"
+            srcset="img/header/header-bg-1@2x.png 2x"
+            alt="dancing"
+          />
+        </picture>
         <p class="slider__slogan">we love creative</p>
         <h1 class="slider__title accent-point">
           passion
         </h1>
       </div>
       <div class="slider__item">
-        <img class="slider__img" src="img/header/header-bg-2.png" alt="dancing">
+        <picture>
+          <source
+            srcset="
+              img/header/header-bg-2.webp    1x,
+              img/header/header-bg-2@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            class="slider__img"
+            src="img/header/header-bg-2.png"
+            srcset="img/header/header-bg-2@2x.png 2x"
+            alt="dancing"
+          />
+        </picture>
         <p class="slider__slogan">we love creative</p>
         <h1 class="slider__title accent-point">
           passion
         </h1>
       </div>
       <div class="slider__item">
-        <img class="slider__img" src="img/header/header-bg-3.png" alt="dancing">
+        <picture>
+          <source
+            srcset="
+              img/header/header-bg-3.webp    1x,
+              img/header/header-bg-3@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            class="slider__img"
+            src="img/header/header-bg-3.png"
+            srcset="img/header/header-bg-3@2x.png 2x"
+            alt="dancing"
+          />
+        </picture>
         <p class="slider__slogan">we love creative</p>
         <h1 class="slider__title accent-point">
           passion
@@ -74,7 +116,9 @@
 
     <div class="header__social header-social">
       <a href="#" class="header-social__link link">linkedin</a>
-      <a href="#" class="header-social__link header-social__link_bold link">facebook</a>
+      <a href="#" class="header-social__link header-social__link_bold link"
+        >facebook</a
+      >
       <a href="#" class="header-social__link link">twitter</a>
     </div>
 
@@ -92,7 +136,7 @@
           dancing girl
         </div>
         <div class="pagination__cur-slide-number">
-          <!-- 02 -->
+          02
         </div>
       </div>
 
@@ -126,8 +170,9 @@
   </div>
 </header>
 
-  <main>
-    <section class="portfolio">
+    <main>
+      <!-- сделать фильтр -->
+      <section class="portfolio">
   <div class="container">
     <div class="tabs portfolio__tabs">
       <div class="tabs__item tabs__item_active accent-point">all</div>
@@ -139,132 +184,251 @@
 
     <div class="content">
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/1.jpg"
-          alt="img"
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/1.webp 1x, img/portfolio/1@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/1.jpg"
+            srcset="img/portfolio/1@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
 
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/2.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/2.webp 1x, img/portfolio/2@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/2.jpg"
+            srcset="img/portfolio/2@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/3.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/3.webp 1x, img/portfolio/3@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/3.jpg"
+            srcset="img/portfolio/3@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/4.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/4.webp 1x, img/portfolio/4@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/4.jpg"
+            srcset="img/portfolio/4@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/5.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/5.webp 1x, img/portfolio/5@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/5.jpg"
+            srcset="img/portfolio/5@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/6.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/6.webp 1x, img/portfolio/6@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/6.jpg"
+            srcset="img/portfolio/6@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/7.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/7.webp 1x, img/portfolio/7@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/7.jpg"
+            srcset="img/portfolio/7@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/8.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/8.webp 1x, img/portfolio/8@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/8.jpg"
+            srcset="img/portfolio/8@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/9.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/9.webp 1x, img/portfolio/9@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/9.jpg"
+            srcset="img/portfolio/9@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/10.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/10.webp 1x, img/portfolio/10@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/10.jpg"
+            srcset="img/portfolio/10@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/11.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/11.webp 1x, img/portfolio/11@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/11.jpg"
+            srcset="img/portfolio/11@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/12.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/12.webp 1x, img/portfolio/12@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/12.jpg"
+            srcset="img/portfolio/12@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/13.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/13.webp 1x, img/portfolio/13@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/13.jpg"
+            srcset="img/portfolio/13@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/14.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/14.webp 1x, img/portfolio/14@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/14.jpg"
+            srcset="img/portfolio/14@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/15.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/15.webp 1x, img/portfolio/15@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/15.jpg"
+            srcset="img/portfolio/15@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/1.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/1.webp 1x, img/portfolio/1@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/1.jpg"
+            srcset="img/portfolio/1@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
       <div class="content__item">
-        <img
-          class="content__img"
-          src="img/portfolio/16.jpg"
-          alt=""
-        />
+        <picture>
+          <source
+            srcset="img/portfolio/16.webp 1x, img/portfolio/16@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__img"
+            src="img/portfolio/16.jpg"
+            srcset="img/portfolio/16@2x.jpg 2x"
+            alt="dancing"
+          />
+        </picture>
       </div>
     </div>
   </div>
 </section>
- 
-  </main>
-  
-  <section class="footer">
+
+    </main>
+
+    <section class="footer">
   <div class="container">
     <div class="footer-social">
       <a class="footer-social__link link icon-facebook" href="#">facebook</a>
@@ -284,11 +448,8 @@
   </div>
 </section>
 
-  <a href="#" class="to-top icon link icon-left-open"></a>
+    <a href="#" class="to-top icon link icon-left-open"></a>
 
-  <script src="js/scripts.min.js"></script>
-</body>
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>
-
-
-

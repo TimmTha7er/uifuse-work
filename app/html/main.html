@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <!-- сделать, что бы поиск разворичивался при клике на него
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- сделать, что бы поиск разворичивался при клике на него
   и сворачивался если он не активен -->
+    <!-- подумать, нужно ли заголовок и подзаголовок включать в слайд -->
+    <!-- написать JS для скролла вниз -->
 
-  <!-- подумать, нужно ли заголовок и подзаголовок включать в слайд -->
-  <!-- написать JS для скролла вниз -->
-  @@include('_header.html')
-  <main>
-    @@include('_portfolio.html') 
-  </main>
-  
-  @@include('_footer.html')
-  <a href="#" class="to-top icon link icon-left-open"></a>
+    @@include('_header.html')
+    <main>
+      <!-- сделать фильтр -->
+      @@include('_portfolio.html')
+    </main>
 
-  <script src="js/scripts.min.js"></script>
-</body>
+    @@include('_footer.html')
+    <a href="#" class="to-top icon link icon-left-open"></a>
+
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>
-
-
-
