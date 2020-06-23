@@ -81,7 +81,7 @@
   opacity: 0;
   transition: opacity 0.25s ease;
   position: relative;
-  z-index: 99;
+  z-index: 2;
 
   &_active {
     opacity: 1;
@@ -97,7 +97,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    z-index: 999;
+    z-index: 2;
   }
   @media only screen and (max-width: 768px) {
     display: block;
@@ -182,7 +182,7 @@
   width: 22px;
   height: 12px;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 3;
 
   padding-top: 12px;
 
@@ -236,28 +236,42 @@
 .search-form {
   position: relative;
   cursor: pointer;
-
   margin-right: 36px;
 
-  &::after {
-    position: absolute;
-    content: '';
-    top: 5px;
-    left: 37px;
-    width: 2px;
-    height: 15px;
-    background-color: #c3c3c3;
-  }
-
   &__btn {
+    // display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
   }
   &__input {
-    display: none;
+    // display: none;
+    position: absolute;
+    top: -6px;
+    right: 25px;
+    padding: 7px;
+    border: 2px solid black;
+    max-width: 0;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity 0.25s ease, max-width 0.25s ease;
+
+    &_active {
+      opacity: 1;
+      max-width: 250px;
+    }
   }
   &__wrap {
-    &::before {
-      font-size: 16px;
+    position: relative;
+    // max-width: 0px;
+    // overflow: hidden;
+    transition: max-width 0.25s ease;
+
+    &_active {
+      // max-width: 250px;
+      // width: 250px;
+      // height: 50px;
     }
   }
 }
@@ -269,6 +283,26 @@
 
   @media only screen and (max-width: 1200px) {
     margin-left: initial;
+  }
+
+  &__search-btn {
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+
+    &::before {
+      font-size: 16px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 37px;
+      width: 2px;
+      height: 15px;
+      background-color: #c3c3c3;
+    }
   }
 }
 

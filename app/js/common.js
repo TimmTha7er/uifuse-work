@@ -31,6 +31,35 @@
     toggleBtn.onclick = () => toggleMenu();
 
     // ----------------------------------------------
+    //		search form
+    // ----------------------------------------------
+    function toggleSearch() {
+      const search = getEl('.search-form__input');
+
+      search.classList.toggle('search-form__input_active');
+    }
+
+    const searchBtn = getEl('.user-bar__search-btn');
+    const formWrap = getEl('.search-form__wrap');
+    const searchInput = getEl('.search-form__input');
+    searchBtn.onclick = () => toggleSearch();
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      const its_form = target == formWrap || formWrap.contains(target);
+
+      const search_is_active = searchInput.classList.contains(
+        'search-form__input_active'
+      );
+
+      const its_hamburger = target == searchBtn;
+
+      if (!its_form && !its_hamburger && search_is_active) {
+        toggleSearch();
+      }
+    });
+
+    // ----------------------------------------------
     //		header slider
     //    https://github.com/ganlanyuan/tiny-slider
     // ----------------------------------------------
