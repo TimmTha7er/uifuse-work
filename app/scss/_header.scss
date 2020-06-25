@@ -38,7 +38,7 @@
 
   &__scroll {
     position: relative;
-    top: -90px;
+    top: -98px;
     margin: 0 auto;
     z-index: 10;
 
@@ -293,7 +293,25 @@
 }
 
 .slider {
+  // for don't jump loading
+  min-height: 700px;
+
+  @media only screen and (max-width: 1200px) {
+    min-height: 630px;
+  }
+  @media only screen and (max-width: 992px) {
+    min-height: 600px;
+  }
+  @media only screen and (max-width: 768px) {
+    min-height: 590px;
+  }
+  @media only screen and (max-width: 480px) {
+    min-height: 430px;
+  }
+
   &__item {
+    // for don't jump loading
+    display: none;
     position: relative;
     padding: 351px 0 140px 0;
 
@@ -359,7 +377,7 @@
     letter-spacing: -2px;
     padding-right: 175px;
     margin-top: 52px;
-    margin-bottom: 26px;
+    margin-bottom: 32px;
 
     &::before {
       width: 10px;
