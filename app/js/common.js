@@ -195,6 +195,25 @@
     attachHandler(links, last);
 
     // ----------------------------------------------
+    //		scroll to top
+    // ----------------------------------------------
+    function toggleBtnToTop() {
+      const pos = window.pageYOffset;
+
+      if (pos > 300) {
+        toTop.style.display = 'flex';
+      } else {
+        toTop.style.display = 'none';
+      }
+    }
+
+    const toTop = getEl('.to-top');
+
+    window.onscroll = function () {
+      toggleBtnToTop();
+    };
+
+    // ----------------------------------------------
     //		portfolio filter
     // ----------------------------------------------
     function removeClass(elements, className) {
