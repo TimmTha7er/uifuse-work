@@ -39,9 +39,8 @@
   &__scroll {
     position: relative;
     top: -90px;
-    cursor: pointer;
-    width: 50px;
     margin: 0 auto;
+    z-index: 10;
 
     @media only screen and (max-width: 480px) {
       top: -20px;
@@ -635,5 +634,58 @@
       top: 500px;
       position: relative;
     }
+  }
+}
+
+.scroll {
+  &__mouse-icon {
+    position: relative;
+    height: 31px;
+    width: 21px;
+    margin: 0 auto;
+    border: 2px solid #363636;
+    border-radius: 21px;
+  }
+
+  &__wheel {
+    position: relative;
+    top: 0px;
+    left: 1px;
+    height: 10px;
+    width: 6px;
+    background: #f4f4f4;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: 2px;
+    opacity: 0;
+  }
+  15% {
+    top: 3px;
+    opacity: 1;
+  }
+  30% {
+    top: 4px;
+    opacity: 1;
+  }
+  60% {
+    top: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 6px;
+    opacity: 0;
   }
 }
