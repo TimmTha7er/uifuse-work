@@ -33,15 +33,14 @@
     // ----------------------------------------------
     //		search form
     // ----------------------------------------------
-    function toggleSearch() {
-      const search = getEl('.search-form__input');
-
-      search.classList.toggle('search-form__input_active');
-    }
-
+    const searchInput = getEl('.search-form__input');
     const searchBtn = getEl('.user-bar__search-btn');
     const formWrap = getEl('.search-form__wrap');
-    const searchInput = getEl('.search-form__input');
+
+    function toggleSearch() {
+      searchInput.classList.toggle('search-form__input_active');
+    }
+
     searchBtn.onclick = () => toggleSearch();
 
     document.addEventListener('click', (e) => {
@@ -111,5 +110,43 @@
         changeSlideNumber('.pagination__total-number');
       }, 500);
     });
+
+    // ----------------------------------------------
+    //		portfolio filter
+    // ----------------------------------------------
+    function removeClass(elements, className) {
+      elements.forEach((el) => {
+        el.classList.remove(className);
+      });
+    }
+
+    function activeCategory() {
+      const categoryFilters = getAllEl('.categories__filter');
+
+      categoryFilters.forEach((el) => {
+        el.onclick = (e) => {
+          const filterName = e.target.getAttribute('data-filter');
+
+          removeClass(categoryFilters, 'categories__filter_active');
+          e.target.classList.add('categories__filter_active');
+          showCategory(filterName);
+        };
+      });
+    }
+    activeCategory();
+
+    function showCategory(category) {
+      const contentItems = getAllEl('.content__item');
+
+      removeClass(contentItems, 'hidden');
+
+      contentItems.forEach((el) => {
+        if (category === 'all') {
+          el.classList.remove('hidden');
+        } else if (el.getAttribute('data-for') !== category) {
+          el.classList.add('hidden');
+        }
+      });
+    }
   });
 })();

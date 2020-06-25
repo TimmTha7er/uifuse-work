@@ -27,9 +27,6 @@
     }
   }
 
-  &__menu {
-  }
-
   &__menu-line {
     display: flex;
     padding-top: 30px;
@@ -157,12 +154,7 @@
       transition: background-color 0.25s ease, opacity 0.25s ease;
 
       @media only screen and (max-width: 992px) {
-        // top: 10px;
-        // left: 75px;
         display: none;
-      }
-      @media only screen and (max-width: 768px) {
-        // left: -7px;
       }
     }
 
@@ -181,10 +173,9 @@
   align-items: center;
   width: 22px;
   height: 12px;
-  cursor: pointer;
-  z-index: 3;
-
   padding-top: 12px;
+  z-index: 3;
+  cursor: pointer;
 
   &__line {
     position: relative;
@@ -238,15 +229,7 @@
   cursor: pointer;
   margin-right: 36px;
 
-  &__btn {
-    // display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
   &__input {
-    // display: none;
     position: absolute;
     top: -6px;
     right: 25px;
@@ -262,17 +245,10 @@
       max-width: 250px;
     }
   }
+
   &__wrap {
     position: relative;
-    // max-width: 0px;
-    // overflow: hidden;
     transition: max-width 0.25s ease;
-
-    &_active {
-      // max-width: 250px;
-      // width: 250px;
-      // height: 50px;
-    }
   }
 }
 
@@ -575,10 +551,6 @@
       background-color: #c3c3c3;
     }
 
-    &:active {
-      // background-color: #555555;
-    }
-
     &.tns-nav-active {
       &::after {
         background-color: #555555;
@@ -659,9 +631,6 @@
     @media only screen and (max-width: 992px) {
       top: 540px;
     }
-    // @media only screen and (max-width: 768px) {
-    //   top: 540px;
-    // }
     @media only screen and (max-width: 480px) {
       top: 500px;
       position: relative;

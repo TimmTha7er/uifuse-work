@@ -1,15 +1,28 @@
 <section class="portfolio">
   <div class="container">
-    <div class="tabs portfolio__tabs">
-      <div class="tabs__item tabs__item_active accent-point">all</div>
-      <div class="tabs__item accent-point">branding</div>
-      <div class="tabs__item accent-point">photo</div>
-      <div class="tabs__item accent-point">printing</div>
-      <div class="tabs__item accent-point">things</div>
+    <div class="categories portfolio__categories">
+      <div
+        class="categories__filter categories__filter_active accent-point"
+        data-filter="all"
+      >
+        all
+      </div>
+      <div class="categories__filter accent-point" data-filter="branding">
+        branding
+      </div>
+      <div class="categories__filter accent-point" data-filter="photo">
+        photo
+      </div>
+      <div class="categories__filter accent-point" data-filter="printing">
+        printing
+      </div>
+      <div class="categories__filter accent-point" data-filter="things">
+        things
+      </div>
     </div>
 
     <div class="content">
-      <div class="content__item">
+      <div class="content__item" data-for="photo">
         <picture>
           <source
             srcset="img/portfolio/1.webp 1x, img/portfolio/1@2x.webp 2x"
@@ -23,8 +36,7 @@
           />
         </picture>
       </div>
-
-      <div class="content__item">
+      <div class="content__item" data-for="branding">
         <picture>
           <source
             srcset="img/portfolio/2.webp 1x, img/portfolio/2@2x.webp 2x"
@@ -38,7 +50,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="photo">
         <picture>
           <source
             srcset="img/portfolio/3.webp 1x, img/portfolio/3@2x.webp 2x"
@@ -52,7 +64,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="things">
         <picture>
           <source
             srcset="img/portfolio/4.webp 1x, img/portfolio/4@2x.webp 2x"
@@ -66,7 +78,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="branding">
         <picture>
           <source
             srcset="img/portfolio/5.webp 1x, img/portfolio/5@2x.webp 2x"
@@ -80,7 +92,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="photo">
         <picture>
           <source
             srcset="img/portfolio/6.webp 1x, img/portfolio/6@2x.webp 2x"
@@ -94,7 +106,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="branding">
         <picture>
           <source
             srcset="img/portfolio/7.webp 1x, img/portfolio/7@2x.webp 2x"
@@ -108,7 +120,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="things">
         <picture>
           <source
             srcset="img/portfolio/8.webp 1x, img/portfolio/8@2x.webp 2x"
@@ -122,7 +134,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="printing">
         <picture>
           <source
             srcset="img/portfolio/9.webp 1x, img/portfolio/9@2x.webp 2x"
@@ -136,7 +148,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="printing">
         <picture>
           <source
             srcset="img/portfolio/10.webp 1x, img/portfolio/10@2x.webp 2x"
@@ -150,7 +162,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="branding">
         <picture>
           <source
             srcset="img/portfolio/11.webp 1x, img/portfolio/11@2x.webp 2x"
@@ -164,7 +176,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="things">
         <picture>
           <source
             srcset="img/portfolio/12.webp 1x, img/portfolio/12@2x.webp 2x"
@@ -178,7 +190,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="printing">
         <picture>
           <source
             srcset="img/portfolio/13.webp 1x, img/portfolio/13@2x.webp 2x"
@@ -192,7 +204,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="photo">
         <picture>
           <source
             srcset="img/portfolio/14.webp 1x, img/portfolio/14@2x.webp 2x"
@@ -206,7 +218,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="things">
         <picture>
           <source
             srcset="img/portfolio/15.webp 1x, img/portfolio/15@2x.webp 2x"
@@ -220,7 +232,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="branding">
         <picture>
           <source
             srcset="img/portfolio/1.webp 1x, img/portfolio/1@2x.webp 2x"
@@ -234,7 +246,7 @@
           />
         </picture>
       </div>
-      <div class="content__item">
+      <div class="content__item" data-for="printing">
         <picture>
           <source
             srcset="img/portfolio/16.webp 1x, img/portfolio/16@2x.webp 2x"
