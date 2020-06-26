@@ -155,11 +155,11 @@
         let progressValues = [];
         let coordinatesValues = [];
 
-        progress.forEach(element => {
+        progress.forEach((element) => {
           progressValues.push(element);
         });
 
-        coordinates.forEach(element => {
+        coordinates.forEach((element) => {
           coordinatesValues.push(element);
         });
 
@@ -240,13 +240,26 @@
     function showCategory(category) {
       const contentItems = getAllEl('.content__item');
 
-      removeClass(contentItems, 'hidden');
-
       contentItems.forEach((el) => {
+        el.classList.add('visuallyhidden');
+
         if (category === 'all') {
           el.classList.remove('hidden');
-        } else if (el.getAttribute('data-for') !== category) {
-          el.classList.add('hidden');
+
+          setTimeout(function () {
+            el.classList.remove('visuallyhidden');
+          }, 350);
+        } else if (el.getAttribute('data-for') !== category) {          
+          setTimeout(function () {
+            el.classList.add('hidden');
+            el.classList.remove('visuallyhidden');
+          }, 350);
+        } else  {
+          el.classList.remove('hidden');
+
+          setTimeout(function () {
+            el.classList.remove('visuallyhidden');
+          }, 350);
         }
       });
     }

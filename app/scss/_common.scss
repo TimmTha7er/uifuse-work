@@ -26,7 +26,10 @@ body {
 
 .hidden {
   display: none;
+}
 
+.visuallyhidden {
+  opacity: 0;
 }
 
 .link {
@@ -53,13 +56,12 @@ body {
   &::before {
     position: absolute;
     content: '';
-    
+
     width: 3px;
     height: 3px;
     border-radius: 50%;
     background-color: $accent-color;
   }
-
 }
 
 .container {
@@ -88,11 +90,11 @@ body {
   bottom: 50px;
   right: 50px;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   height: 50px;
   width: 50px;
   border-radius: 3px;
-  background-color: rgba(244, 244, 244, .5);
+  background-color: rgba(244, 244, 244, 0.5);
   cursor: pointer;
   outline: none;
   user-select: none;
