@@ -74,18 +74,17 @@
 	<link rel="stylesheet" href="css/style.min.css" />
 </head>
   <body>
-    <!-- попробовать добавить анимацию для фильтра -->
     <!-- сделать рефакторинг -->
     <!-- сделать билд и залить на github -->
     <!-- пройти google test speed и css and html validation -->
     <header class="header">
   <div class="container header__container">
     <div class="header__menu-line menu-line">
-      <a href="#" class="header__logo accent-point link">
+      <a href="#" class="logo accent-point link">
         uifuse
       </a>
 
-      <nav class="header__menu main-menu">
+      <nav class="menu-line__main-menu main-menu">
         <a href="#" class="main-menu__link link accent-point">home</a>
         <a href="#" class="main-menu__link link accent-point">about</a>
         <a href="#" class="main-menu__link link accent-point">services</a>
@@ -95,10 +94,10 @@
         <a href="#" class="main-menu__link link accent-point">contact</a>
       </nav>
 
-      <div class="user-bar">
+      <div class="menu-line__user-bar user-bar">
         <div class="user-bar__search-btn icon icon-search"></div>
 
-        <div class="search-form__wrap">
+        <div class="user-bar__search-form search-form__wrap">
           <form action="#" enctype="multipart/form-data" class="search-form">
             <input
               class="search-form__input"
@@ -106,7 +105,6 @@
               placeholder="search"
               name="search"
             />
-            <!-- <input class="search-form__btn" type="submit" value="" /> -->
           </form>
         </div>
 
@@ -116,116 +114,113 @@
       </div>
     </div>
 
-    <!-- <p class="slider__slogan">we love creative</p>
-    <h1 class="slider__title accent-point">
-      passion
-    </h1> -->
+    <div class="header__body">
+      <div class="header__slider slider">
+        <div class="slider__item">
+          <picture>
+            <source
+              srcset="
+                img/header/header-bg-1.webp    1x,
+                img/header/header-bg-1@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              class="slider__img"
+              src="img/header/header-bg-1.png"
+              srcset="img/header/header-bg-1@2x.png 2x"
+              alt="dancing"
+            />
+          </picture>
+          <p class="slider__slogan">we love creative</p>
+          <h1 class="slider__title accent-point">
+            passion
+          </h1>
+        </div>
+        <div class="slider__item">
+          <picture>
+            <source
+              srcset="
+                img/header/header-bg-2.webp    1x,
+                img/header/header-bg-2@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              class="slider__img"
+              src="img/header/header-bg-2.png"
+              srcset="img/header/header-bg-2@2x.png 2x"
+              alt="dancing"
+            />
+          </picture>
+          <p class="slider__slogan">we love creative</p>
+          <h1 class="slider__title accent-point">
+            passion
+          </h1>
+        </div>
+        <div class="slider__item">
+          <picture>
+            <source
+              srcset="
+                img/header/header-bg-3.webp    1x,
+                img/header/header-bg-3@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              class="slider__img"
+              src="img/header/header-bg-3.png"
+              srcset="img/header/header-bg-3@2x.png 2x"
+              alt="dancing"
+            />
+          </picture>
+          <p class="slider__slogan">we love creative</p>
+          <h1 class="slider__title accent-point">
+            passion
+          </h1>
+        </div>
+      </div>
 
-    <div class="header__slider slider">
-      <div class="slider__item">
-        <picture>
-          <source
-            srcset="
-              img/header/header-bg-1.webp    1x,
-              img/header/header-bg-1@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            class="slider__img"
-            src="img/header/header-bg-1.png"
-            srcset="img/header/header-bg-1@2x.png 2x"
-            alt="dancing"
-          />
-        </picture>
-        <p class="slider__slogan">we love creative</p>
-        <h1 class="slider__title accent-point">
-          passion
-        </h1>
+      <div class="pagination header__pagination">
+        <div class="pagination__slide-count">
+          <div class="pagination__total-number">03</div>
+          <div class="pagination__slash">/</div>
+          <div class="pagination__cur-number">02</div>
+        </div>
+
+        <div class="header__header-nav-container header-nav-container"></div>
+
+        <div class="pagination__active-slide">
+          <div class="pagination__slide-name">
+            dancing girl
+          </div>
+          <div class="pagination__active-slide-number">
+            02
+          </div>
+        </div>
+
+        <div class="header-controls-btns pagination__controls-btns">
+          <div class="header-controls-btns__next">
+            next
+          </div>
+          <div class="header-controls-btns__prev">
+            previous
+          </div>
+        </div>
       </div>
-      <div class="slider__item">
-        <picture>
-          <source
-            srcset="
-              img/header/header-bg-2.webp    1x,
-              img/header/header-bg-2@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            class="slider__img"
-            src="img/header/header-bg-2.png"
-            srcset="img/header/header-bg-2@2x.png 2x"
-            alt="dancing"
-          />
-        </picture>
-        <p class="slider__slogan">we love creative</p>
-        <h1 class="slider__title accent-point">
-          passion
-        </h1>
+
+      <div class="header__header-social header-social">
+        <a href="#" class="header-social__link link">linkedin</a>
+        <a href="#" class="header-social__link header-social__link_bold link"
+          >facebook</a
+        >
+        <a href="#" class="header-social__link link">twitter</a>
       </div>
-      <div class="slider__item">
-        <picture>
-          <source
-            srcset="
-              img/header/header-bg-3.webp    1x,
-              img/header/header-bg-3@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            class="slider__img"
-            src="img/header/header-bg-3.png"
-            srcset="img/header/header-bg-3@2x.png 2x"
-            alt="dancing"
-          />
-        </picture>
-        <p class="slider__slogan">we love creative</p>
-        <h1 class="slider__title accent-point">
-          passion
-        </h1>
-      </div>
+
+      <a href="#portfolio" class="scroll header__scroll">
+        <div class="scroll__mouse-icon"><div class="scroll__wheel"></div></div>
+      </a>
     </div>
-
-    <div class="header__social header-social">
-      <a href="#" class="header-social__link link">linkedin</a>
-      <a href="#" class="header-social__link header-social__link_bold link"
-        >facebook</a
-      >
-      <a href="#" class="header-social__link link">twitter</a>
-    </div>
-
-    <div class="pagination header__pagination">
-      <div class="pagination__slide-number">
-        <div class="pagination__cur-number">03</div>
-        <div class="pagination__slash">/</div>
-        <div class="pagination__total-number">02</div>
-      </div>
-
-      <div class="header-nav-container"></div>
-
-      <div class="pagination__cur-slide">
-        <div class="pagination__slide-name">
-          dancing girl
-        </div>
-        <div class="pagination__cur-slide-number">
-          02
-        </div>
-      </div>
-
-      <div class="header-controls-btns pagination__controls-btns">
-        <div class="header-controls-btns__next">
-          next
-        </div>
-        <div class="header-controls-btns__prev">
-          previous
-        </div>
-      </div>
-    </div>
-
-    <a href="#portfolio" class="scroll header__scroll">
-      <div class="scroll__mouse-icon"><div class="scroll__wheel"></div></div>
-    </a>
   </div>
 </header>
 
@@ -269,8 +264,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -289,8 +284,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -309,8 +304,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -329,8 +324,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -349,8 +344,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -369,8 +364,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -389,8 +384,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -409,8 +404,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -429,8 +424,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -449,8 +444,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -469,8 +464,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -489,8 +484,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -509,8 +504,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -529,8 +524,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -549,8 +544,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -569,8 +564,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>
@@ -589,8 +584,8 @@
         </picture>
         <div class="hover">
           <div class="hover__details">
-            <p class="hover__work-about accent-point">Wall Artwork Design</p>
-            <p class="hover__work-theme">Branding, Artwork</p>
+            <p class="hover__work-descr accent-point">Wall Artwork Design</p>
+            <p class="hover__work-themes">Branding, Artwork</p>
           </div>
         </div>
       </div>

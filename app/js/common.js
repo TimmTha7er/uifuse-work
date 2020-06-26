@@ -94,7 +94,7 @@
     });
 
     // change slide number
-    const totalSlide = getEl('.pagination__cur-number');
+    const totalSlide = getEl('.pagination__total-number');
     totalSlide.innerHTML = '0' + slider.getInfo().slideCount;
 
     function changeSlideNumber(className) {
@@ -102,12 +102,12 @@
       element.innerHTML = '0' + slider.getInfo().index;
     }
 
-    changeSlideNumber('.pagination__cur-slide-number');
+    changeSlideNumber('.pagination__active-slide-number');
 
     slider.events.on('indexChanged', () => {
       setTimeout(() => {
-        changeSlideNumber('.pagination__cur-slide-number');
-        changeSlideNumber('.pagination__total-number');
+        changeSlideNumber('.pagination__active-slide-number');
+        changeSlideNumber('.pagination__cur-number');
       }, 500);
     });
 

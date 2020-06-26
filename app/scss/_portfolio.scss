@@ -108,11 +108,7 @@
   &__item {
     position: relative;
     background-color: #ebebeb;
-
-
-    transition: all 1s linear;
-
-
+    transition: opacity .35s linear;
 
     &:hover {
       .hover {
@@ -210,7 +206,7 @@
     }
   }
 
-  &__work-about {
+  &__work-descr {
     position: relative;
     margin-top: 24px;
     margin-bottom: 15px;
@@ -239,7 +235,7 @@
     }
   }
 
-  &__work-theme {
+  &__work-themes {
     font-family: 'Open Sans';
     font-weight: 600;
   }
